@@ -1,0 +1,19 @@
+       /* timeline layout */
+        body { font-family: system-ui, Arial, sans-serif; margin: 20px; }
+        .timelines { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+        .language { flex: 1 1 300px; background:#fff; border:1px solid #eee; padding:12px; border-radius:8px; position:relative; }
+        .language h3 { margin: 0 0 8px 0; font-size:18px; text-transform: capitalize; }
+        .timeline { position: relative; padding-left: 24px; }
+        .timeline::before { content:""; position:absolute; left:8px; top:0; bottom:0; width:2px; background:#e6e6e6; }
+        .entry { position: relative; margin: 12px 0; padding-left: 12px; }
+        .entry::before { content:""; position:absolute; left:-8px; top:6px; width:12px; height:12px; border-radius:50%; background:var(--dot,#999); border:2px solid white; box-shadow:0 0 0 2px rgba(0,0,0,0.03); }
+        .title { font-weight:600; margin:0 0 4px 0; }
+        .meta { font-size:13px; color:#555; margin:0; }
+        .range { font-size:12px; color:#888; margin-top:6px; }
+
+        /* colors per language */
+        .language-japanese { --dot: #e11d48; }
+        .language-korean   { --dot: #2563eb; }
+        .language-chinese  { --dot: #16a34a; }
+
+        @media (max-width:720px) { .timelines { flex-direction: column; } }
